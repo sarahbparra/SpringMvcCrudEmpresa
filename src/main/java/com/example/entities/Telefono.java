@@ -17,23 +17,22 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "correos")
+@Table(name = "telefonos")
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 
-public class Correo implements Serializable{
+public class Telefono implements Serializable{
     
     private static final long serialVersionUID = 1L; 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; 
-    private String email; 
+    private String numero; 
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH) 
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
     @JoinColumn(name = "idEmpleado")
     private Empleado empleado; 
 }
