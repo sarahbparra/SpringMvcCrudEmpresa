@@ -16,7 +16,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -39,7 +38,7 @@ public class Empleado implements Serializable{
 
     private int id; 
 
-    @NotNull(message = "Campo no puede ser nulo.")
+    // @NotNull(message = "Campo no puede ser nulo.")
 
     private String nombre; 
     private String apellidos; 
